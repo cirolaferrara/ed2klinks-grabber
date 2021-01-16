@@ -1,0 +1,25 @@
+{
+    "name": "cirolaferrara/ed2klinks-grabber",
+    "type": "library",
+    "description": "Grab ed2k links from phpBB forum",
+    "keywords": [
+        "p2p",
+        "phpBB",
+        "forum",
+        "grab",
+        "ed2k",
+        "mule"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "ext-curl": "*",
+        "ext-sockets": "*",
+        "php-curl-class/php-curl-class": "^8.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ed2kLinksGrabber\\": "src/"
+        }
+    }
+}
