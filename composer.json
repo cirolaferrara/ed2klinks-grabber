@@ -13,8 +13,6 @@
     "license": "MIT",
     "require": {
         "php": ">=5.6",
-        "ext-curl": "*",
-        "ext-sockets": "*",
         "php-curl-class/php-curl-class": "^8.9"
     },
     "autoload": {
