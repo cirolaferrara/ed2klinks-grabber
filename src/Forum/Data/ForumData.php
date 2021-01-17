@@ -10,17 +10,17 @@ final class ForumData
     const SID_URL = 'phpbb3_mzl11_sid';
 
     /** @var string */
-    public string $url;
+    public $url;
 
     /** @var string */
-    public string $username;
+    public $username;
 
     /** @var string */
-    public string $password;
+    public $password;
 
     /** @var string */
-    public string $sid;
+    public $sid;
 
     /** @var array */
-    public array $cookies;
+    public $cookies;
 }

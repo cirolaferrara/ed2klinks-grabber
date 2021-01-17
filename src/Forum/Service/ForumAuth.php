@@ -13,9 +13,10 @@ final class ForumAuth
      * @param string $url
      * @param string $username
      * @param string $password
+     *
      * @return ForumData|null
      */
-    public function authenticate(string $url, string $username, string $password): ?ForumData
+    public function authenticate($url, $username, $password)
     {
         // Get the sid
         $curl = new Curl();

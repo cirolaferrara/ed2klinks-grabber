@@ -9,7 +9,7 @@ use Curl\Curl;
 
 final class ForumReader
 {
-    private ForumData $forumData;
+    private $forumData;
 
     /**
      * ForumReader constructor.
@@ -27,9 +27,10 @@ final class ForumReader
      * @param string|null $url
      * @param int $noPages
      * @param array $ignoreList
+     *
      * @return array|null
      */
-    public function getTopicsFromPage(string $url = null, int $noPages = 1, array $ignoreList = array()): ?array {
+    public function getTopicsFromPage($url = null,$noPages = 1, $ignoreList = array()) {
         $topics = null;
 
         if($this->forumData->cookies !== null && $url !== null) {
@@ -66,9 +67,10 @@ final class ForumReader
      * Get links.
      *
      * @param string|null $url
+     *
      * @return array|null
      */
-    public function getLinksFromPage(string $url = null): ?array {
+    public function getLinksFromPage($url = null) {
         $ed2kLinks = null;
 
         if($this->forumData->cookies !== null && $url !== null) {
