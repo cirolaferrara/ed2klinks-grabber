@@ -30,7 +30,7 @@ final class ForumReader
      *
      * @return array|null
      */
-    public function getTopicsFromPage($url = null,$noPages = 1, $ignoreList = array()) {
+    public function getTopicsFromPage($url = null, $noPages = 1, $ignoreList = array()) {
         $topics = null;
 
         if($this->forumData->cookies !== null && $url !== null) {
@@ -38,7 +38,7 @@ final class ForumReader
             $baseUrl = $parsedUrl['path'].'?'.$parsedUrl['query'];
 
             for($i=0; $i<= $noPages; $i++) {
-                $start = $noPages * $i;
+                $start = $noPages * $i * 25;
                 $curl = new Curl();
                 $curl->setCookies($this->forumData->cookies);
                 $curl->get($this->forumData->url . $baseUrl . '&start=' . $start);
