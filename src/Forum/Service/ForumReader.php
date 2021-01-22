@@ -37,7 +37,7 @@ final class ForumReader
             $parsedUrl = parse_url($url);
             $baseUrl = $parsedUrl['path'].'?'.$parsedUrl['query'];
 
-            for($i=0; $i<= $noPages; $i++) {
+            for($i=0; $i < $noPages; $i++) {
                 $start = $noPages * $i * 25;
                 $curl = new Curl();
                 $curl->setCookies($this->forumData->cookies);
